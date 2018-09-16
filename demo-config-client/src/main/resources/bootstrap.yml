@@ -1,0 +1,15 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    # 和git里的文件名对应
+    name: config-client
+  cloud:
+    config:
+      # 仓库分支
+      label: master
+      # dev 开发环境配置文件 |  test 测试环境  |  pro 正式环境 和git里的文件名对应
+      profile: dev
+      # 指明配置服务中心的网址
+      uri: http://localhost:8080/
